@@ -4,8 +4,7 @@ const path = require("path");
 
 app.use(express.urlencoded({ extended: false }));
 app.use(getWeather);
-//for style.css
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "public"))); //for style.css
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
